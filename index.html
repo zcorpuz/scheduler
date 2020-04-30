@@ -32,35 +32,44 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-        <!-- Flush List for time slots -->
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">9am</li>
-            <li class="list-group-item">10am</li>
-            <li class="list-group-item">11am</li>
-            <li class="list-group-item">12pm</li>
-            <li class="list-group-item">1pm</li>
-            <li class="list-group-item">2pm</li>
-            <li class="list-group-item">3pm</li>
-            <li class="list-group-item">4pm</li>
-            <li class="list-group-item">5pm</li>
-        </ul>
 
-        <!-- Slots for activites to go into -->
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Input Event Here</a>
-        </div>
+    <div class="container">
+      <div class="row">
+          <!-- Flush List for time slots -->
+            <ul class="list-group list-group-flush timeInput">
+              <div class="col-md-2"></div>
+                <li class="list-group-item">9am</li>
+                <li class="list-group-item">10am</li>
+                <li class="list-group-item">11am</li>
+                <li class="list-group-item">12pm</li>
+                <li class="list-group-item">1pm</li>
+                <li class="list-group-item">2pm</li>
+                <li class="list-group-item">3pm</li>
+                <li class="list-group-item">4pm</li>
+                <li class="list-group-item">5pm</li>
+              </div>
+            </ul>
+
+          <!-- Slots for activites to go into -->
+            <div class="list-group eventInput">
+              <div class="col-md-10"></div>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow1">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow2">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow3">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow4">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow5">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow6">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow7">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow8">Input Event Here</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="eventRow9">Input Event Here</a>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
