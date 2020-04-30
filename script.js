@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-    $("#eventRow1").on("click", function(event) {
+    var currentDate = moment().format("MMMM Do YYYY, h:mm a");      
+    $("#currentDay").append(currentDate);
+
+    $("#eventRow1").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow1").text(eventAdd);
     });
@@ -44,6 +47,28 @@ $(document).ready(function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow9").text(eventAdd);
     });
+
+    colorBlock();
+    // Compare time slot to current time in order to change the color of the block
+    function colorBlock() {
+        var currentHour = moment().format('H');
+        if ($(".eventRow").attr("value") === currentHour) {
+            $(".eventRow").addClass("present");
+        } else if ($(".eventRow").attr("value") > currentHour) {
+            $(".eventRow").addClass("past");
+        } else if ($(".eventRow").attr("value") < currentHour) {
+            $(".eventRow").addClass("future");
+        }
+    }
+    
+
+    
+
+    // Function to save text to local storage
+    // function setEvent() {
+    //     eventAdd = JSON.parse(eventAdd);
+    //     localStorage.setItem(event, eventAdd);
+    // }
 
 });
 
