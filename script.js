@@ -1,11 +1,15 @@
 $(document).ready(function() {
 
+    // This sets the current date at the top of the page
     var currentDate = moment().format("MMMM Do YYYY, h:mm a");      
     $("#currentDay").append(currentDate);
 
+    // Below are the click events for each row so that the user can input what events they want for each hour
     $("#eventRow1").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow1").text(eventAdd);
+        localStorage.setItem("9am Event", ($("#eventRow1").html()));
+        localStorage.getItem("9am Event")
     });
 
     $("#eventRow2").on("click", function() {
@@ -49,6 +53,7 @@ $(document).ready(function() {
     });
 
     colorBlock();
+
     // Compare time slot to current time in order to change the color of the block
     function colorBlock() {
         var currentHour = moment().format('H');
@@ -60,16 +65,6 @@ $(document).ready(function() {
             $(".eventRow").addClass("future");
         }
     }
-    
-
-    
-
-    // Function to save text to local storage
-    // function setEvent() {
-    //     eventAdd = JSON.parse(eventAdd);
-    //     localStorage.setItem(event, eventAdd);
-    // }
-
 });
 
 
