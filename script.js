@@ -17,7 +17,7 @@ $(document).ready(function() {
             // Compare each timeblock to current hour
             if (eventBlock < currentHour) {
                 $(this).addClass("past");
-            }else if (eventBlock === currentHour) {
+            }else if (eventBlock == currentHour) {
                 $(this).addClass("present");
             }else if (eventBlock > currentHour) {
                 $(this).addClass("future");
@@ -27,6 +27,7 @@ $(document).ready(function() {
 
     colorBlock();
 
+    // This grabs events from localStorage and appends to page on refresh
     $("#eventRow1").append(localStorage.getItem("9am Event"));
     $("#eventRow2").append(localStorage.getItem("10am Event"));
     $("#eventRow3").append(localStorage.getItem("11am Event"));
