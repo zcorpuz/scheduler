@@ -27,6 +27,16 @@ $(document).ready(function() {
 
     colorBlock();
 
+    $("#eventRow1").append(localStorage.getItem("9am Event"));
+    $("#eventRow2").append(localStorage.getItem("10am Event"));
+    $("#eventRow3").append(localStorage.getItem("11am Event"));
+    $("#eventRow4").append(localStorage.getItem("12pm Event"));
+    $("#eventRow5").append(localStorage.getItem("1pm Event"));
+    $("#eventRow6").append(localStorage.getItem("2pm Event"));
+    $("#eventRow7").append(localStorage.getItem("3pm Event"));
+    $("#eventRow8").append(localStorage.getItem("4pm Event"));
+    $("#eventRow9").append(localStorage.getItem("5pm Event"));
+
     // Below are the click events for each row so that the user can input what events they want for each hour
     $("#eventRow1").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
