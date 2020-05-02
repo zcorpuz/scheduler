@@ -25,6 +25,7 @@ $(document).ready(function() {
         })
     }
 
+
     colorBlock();
 
     // This grabs events from localStorage and appends to page on refresh
