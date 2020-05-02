@@ -25,66 +25,70 @@ $(document).ready(function() {
         })
     }
 
-    // function setEvents() {
-    //     $(this).empty();
-    //     $(this).append(localStorage.getItem("Event")); 
-    // }
-
-
-    // localStorage.setItem("9am Event", ($("#eventRow1").html()));
-    // var savedEvents = localStorage.getItem("9am Event");
-    // $("eventRow1").html(savedEvents);
-    // console.log(saveEvents);
-    // $(".eventRow").append(localStorage.getItem("9am Event"));
-    // localStorage.setItem("Event", $(".eventRow").html());
-    // eventAdd.replace(localStorage.getItem("Event"));
-
     colorBlock();
 
     // Below are the click events for each row so that the user can input what events they want for each hour
     $("#eventRow1").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow1").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("9am Event", ($("#eventRow1").html()));
     });
     
 
     $("#eventRow2").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow2").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("10am Event", ($("#eventRow2").html()));
     });
 
     $("#eventRow3").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow3").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("11am Event", ($("#eventRow3").html()));
     });
 
     $("#eventRow4").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow4").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("12pm Event", ($("#eventRow4").html()));
     });
 
     $("#eventRow5").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow5").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("1pm Event", ($("#eventRow5").html()));
     });
 
     $("#eventRow6").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow6").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("2pm Event", ($("#eventRow6").html()));
     });
 
     $("#eventRow7").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow7").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("3pm Event", ($("#eventRow7").html()));
     });
 
     $("#eventRow8").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow8").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("4pm Event", ($("#eventRow8").html()));
     });
 
     $("#eventRow9").on("click", function() {
         var eventAdd = prompt("What event would you like to add?");
         $("#eventRow9").text(eventAdd);
+        // Save to Local Storage
+        localStorage.setItem("5pm Event", ($("#eventRow9").html()));
     });
 });
